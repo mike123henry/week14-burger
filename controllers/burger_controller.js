@@ -1,4 +1,4 @@
-console.log("burger_controller.js")
+//console.log("burger_controller.js")
 /*
 Here is where you create all the functions that will do the routing for your app, and the logic of each route.
 */
@@ -14,14 +14,14 @@ router.get('/', function (req, res) {
 router.get('/burger', function (req, res) {
     burger.selectAll(function (data) {
         var hbsObject = { burger: data };
-        console.log(hbsObject);
+        //console.log(hbsObject);
         res.render('index', hbsObject);
     });
 });
 
 router.put('/burger/eaten/:id', function(req, res){
     var burgerID = 'id = ' + req.params.id;
-    console.log("/burger/eaten burgerID = "+ burgerID);
+    //console.log("/burger/eaten burgerID = "+ burgerID);
     burger.update({ devoured: req.body.devoured}, burgerID, function(){
         res.redirect('/burger');
     });

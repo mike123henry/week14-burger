@@ -1,4 +1,4 @@
-console.log("orm.js");
+//console.log("orm.js");
 /*
 Here is the O.R.M. where you write functions that takes inputs and conditions and turn them into database commands like SQL.
 */
@@ -30,7 +30,7 @@ function objToSql(ob) {
 var orm = {
     selectAllFrom: function (tableInput, cb) {
         var queryString = 'SELECT * FROM ' + tableInput + ';';
-        console.log("selectAll queryString = "+ queryString);
+        //console.log("selectAll queryString = "+ queryString);
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result);
@@ -40,25 +40,25 @@ var orm = {
         var queryString = 'INSERT INTO ' + tableInput + ' '+
                            '( ' + cols.toString() + ' ) '+
                            'VALUES ( ' + printQuestionMarks(vals.length) + ');' ;
-        console.log("insertOne queryString = "+ queryString);
-        console.log("insertOne cols = "+ cols);
-        console.log("insertOne vals = "+ vals);
+        //console.log("insertOne queryString = "+ queryString);
+        //console.log("insertOne cols = "+ cols);
+        //console.log("insertOne vals = "+ vals);
       connection.query(queryString, vals, function(err, result) {
         if (err) throw err;
         cb(result);
       });
     },
     updateSetWhere: function (table, objColVals, condition, cb) {
-        console.log("burger orm update");
-        console.log("    -- table = "+table );
-        console.log("    -- objColVals = "+objColVals);
-        console.log("    -- condition = "+condition);
+        //console.log("burger orm update");
+        //console.log("    -- table = "+table );
+        //console.log("    -- objColVals = "+objColVals);
+        //console.log("    -- condition = "+condition);
 
         var queryString = 'UPDATE ' + table +
                           ' SET '   + objToSql(objColVals) +
                           ' WHERE ' + condition;
 
-        console.log('updateSetWhere = '+queryString);
+        //console.log('updateSetWhere = '+queryString);
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result);

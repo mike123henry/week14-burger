@@ -1,4 +1,4 @@
-console.log("burger.js");
+//console.log("burger.js");
 /*
 Here is where you setup a model for how to interface with the database.
 */

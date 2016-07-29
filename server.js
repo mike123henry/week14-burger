@@ -25,5 +25,5 @@ app.use('/', routes);
 
 //start the server
 app.listen(app.get('port'),function(){
-    console.log('Express started on http://localhost:' + app.get('port') +" press cntrl-C to exit");
+    //console.log('Express started on http://localhost:' + app.get('port') +" press cntrl-C to exit");
 });
