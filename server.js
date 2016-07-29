@@ -2,6 +2,7 @@
 var express = require('express');
 var app = express();
 app.set("port", process.env.PORT || 3000);
+app.use(express.static('public')); //root path to static files like css and images
 
 //require and setup method-overide
 var methodOverride = require('method-override');
@@ -15,15 +16,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-
-// //require and setup mysql
-// var mysql = require('mysql');
-// var connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'day_planner_db'
-// });
 
 
 //import burger_controller.js for routing
