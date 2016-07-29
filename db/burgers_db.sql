@@ -18,11 +18,11 @@ USE `burgers_db`;
 
 -- Dumping structure for table burgers_db.burgers
 CREATE TABLE IF NOT EXISTS `burgers` (
-  `ID` INT(11) NOT NULL AUTO_INCREMENT,
-  `BurgerName`  VARCHAR(50) NOT NULL,
-  `Devoured` TINYINT(4) NOT NULL,
-  `Date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`ID`)
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `burgerName`  VARCHAR(50) NOT NULL,
+  `devoured` TINYINT(4) NOT NULL,
+  `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Dumping data for table burgers_db.burgers: ~0 rows (approximately)

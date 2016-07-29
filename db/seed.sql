@@ -27,7 +27,7 @@
 
 -- Dumping data for table burgers_db.burgers: ~0 rows (approximately)
 /*!40000 ALTER TABLE `burgers` DISABLE KEYS */;
-REPLACE INTO `burgers` (`ID`, `BurgerName`, `Devoured`, `Date`) VALUES
+REPLACE INTO `burgers` (`id`, `burgerName`, `devoured`, `date`) VALUES
 	(1, 'Cheese Burger', 0, '2016-07-27 20:28:58'),
 	(2, 'Plain Burger', 0, '2016-07-27 20:29:17');
 /*!40000 ALTER TABLE `burgers` ENABLE KEYS */;

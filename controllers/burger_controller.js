@@ -12,13 +12,27 @@ router.get('/', function (req, res) {
 });
 
 router.get('/burger', function (req, res) {
-    burger.all(function (data) {
+    burger.selectAll(function (data) {
         var hbsObject = { burger: data };
         console.log(hbsObject);
         res.render('index', hbsObject);
     });
 });
 
+router.put('/burger/eaten/:id', function(req, res){
+    var burgerID = 'id = ' + req.params.id;
+    console.log("/burger/eaten burgerID = "+ burgerID);
+    burger.update({ devoured: req.body.devoured}, burgerID, function(){
+        res.redirect('/burger');
+    });
+
+});
+
+router.post('/burger/create', function (req, res) {
+    burger.create(['burgerName', 'devoured'], [req.body.name, false], function () {
+        res.redirect('/burger');
+    });
+});
 
 
 module.exports = router;
