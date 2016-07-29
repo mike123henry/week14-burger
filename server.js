@@ -20,7 +20,7 @@ app.set('view engine', 'handlebars');
 
 //import burger_controller.js for routing
 var routes = require('./controllers/burger_controller.js');
-console.log("routes = "+routes)
+//console.log("routes = "+routes)
 app.use('/', routes);
 
 //start the server

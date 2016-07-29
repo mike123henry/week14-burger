@@ -15,7 +15,7 @@ var source = {
     jawsDB: {
         Host: 'nj5rh9gto1v5n05t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         Username: 'rxiw05zby67bvyb0',
-        Password: 'rlj50db4hg3ch9uo ',
+        Password: 'rlj50db4hg3ch9uo',
         Port: 3306,
         database: 'fuvq8cyzfx0nmaxp'
         // TODO: Add your JawsDB connection info here
@@ -33,7 +33,7 @@ connection.connect(function(err) {
         console.error('error connecting: ' + err.stack);
         return;
     }
-    //console.log('Database connected as id ' + connection.threadId);
+    console.log('Database connected as id ' + connection.threadId);
 });
 
 module.exports = connection;
