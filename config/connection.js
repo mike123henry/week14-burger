@@ -15,7 +15,7 @@ var source = {
     jawsDB: {
         port: 3306,
         host: "nj5rh9gto1v5n05t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        username: "rxiw05zby67bvyb0",
+        user: "rxiw05zby67bvyb0",
         password: "xw1ab8zkgxgha7cd",
         database: "fuvq8cyzfx0nmaxp"
         // TODO: Add your JawsDB connection info here
